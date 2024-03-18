@@ -7,6 +7,7 @@
     <title>SD Sports</title>
     <link rel="stylesheet" href="../styles/style.css">
     <link rel="icon" href="assets/favicon.png" type="image/x-icon">
+    <script src="../js/script.js"></script>
 </head>
 
 <body>
