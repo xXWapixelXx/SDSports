@@ -1,18 +1,13 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Login</title>
+        <title>Registreren</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <link rel="stylesheet" href="/css/rythm.css">
         <link  href="../styles/stylee.css" rel='stylesheet'>
         <style>
-.Login {
-    float: inline-end;
-    color:red;
-}
-
-
+            
 ul {
     display: inline;
     text-align: left;
@@ -46,12 +41,14 @@ body {
 }
 
 
-*{margin: 0;
-  padding: 0;
-  box-sizing: border-box;}  
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}  
 
 
-.inloggen {
+.registreren {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -151,7 +148,6 @@ body {
 }
 
 
-
         </style>
     </head>
 
@@ -160,26 +156,37 @@ body {
         <a href="../index.php" class="logo"><img class="imglogo" src="../img/logo.png" alt="logo"></a>
         <ul>
             <li><a href="./feedback.php">feedback</a></li>
-            <li><a href="./registreer.php">Registreer</a></li>
+            <li><a href="./login.php">login</a></li>
         </ul>
     </header>
 
-   <section class="inloggen">
+   <section class="registreren">
     <div class="wrapper">
-    <form method="post">
-            <h1>Login</h1>
+    <form action="action.php" method="post">
+            <h1>registreren</h1>
+            <div class="input-box">
+            <label for="username"></label>
+            <input type="username" name="username" placeholder="username" required/>
+            <i class='bx bxs-envelope' ></i>
+        </div>
         <div class="input-box">
             <label for="email"></label>
             <input type="email" name="email" placeholder="@gmail.com" required/>
             <i class='bx bxs-envelope' ></i>
         </div>
         <div class="input-box">
-            <label for="password"></label>
-            <input type="password" id="wachtwoord" name="password" placeholder="password" required>
+            <label for="wachtwoord"></label>
+            <input type="password" id="password" name="password" placeholder="password" required>
+            <i class='bx bxs-lock-alt' ></i>
+        </div>
+        <div class="input-box">
+            <label for="wachtwoord2"></label>
+            <input type="bevestig password" id="wachtwoord2" name="wachtwoord2" placeholder="bevestig password" required>
             <i class='bx bxs-lock-alt' ></i>
         </div>
 
-        <button type="submit" class="btn" name="submitbtn">Login</button>
+        <button type="submit" class="btn" name="submit">registreren</button>
+
     </form>
     </div>
    </section>
@@ -208,44 +215,6 @@ body {
             </div>
         </footer>
 </body>
-<?php
-$dsn = 'mysql:dbname=primeform;host=localhost';
-$dbUser = 'root';
-$dbPassword = '';
- 
-function doLogin($pdo) {
-    $email = $_POST['email'];
-    $password = $_POST['password'];
-    
-    $res = $pdo->query("SELECT * FROM user");
-    $data = $res->fetchAll();
-  
-    foreach($data as $idx) {
-      if(strcmp($idx['email'], $email) == 0) {
-        if(password_verify($password, $idx['password'])) {
-            echo '<script>window.location.href = "../home.php"</script>';
-            die();
-        } else {
-          echo 'Incorrect!'; // stop hier niet verder gaan gegevens kloppen niet.
-        }
-      }
-    }
-}
-
-try
-{
-    $pdo = new PDO($dsn, $dbUser, $dbPassword);
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    if (isset($_POST['submitbtn'])) {
-        doLogin($pdo);
-    }
-}
-catch(PDOException $e)
-{
-    echo "PDO error".$e->getMessage();
-    die();
-}
-?>
 
 <!--dit is de javascript voor het navbar-->
 <script type="text/javascript">
@@ -254,5 +223,4 @@ catch(PDOException $e)
         header.classList.toggle("sticky", window.scrollY > 0)
     })
 </script>
-
 </html>

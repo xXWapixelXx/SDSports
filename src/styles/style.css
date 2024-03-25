@@ -4,7 +4,6 @@
     box-sizing: border-box;
 }
 
-
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color: #282828;
@@ -31,11 +30,10 @@ nav ul li img {
 nav ul li a {
     text-decoration: none;
     color: #fff;
-    
 }
 
-nav ul li a:hover{
-    text-decoration: underline; 
+nav ul li a:hover {
+    text-decoration: underline;
     text-decoration-color: #f1c40f;
 }
 
@@ -97,11 +95,10 @@ a {
     background-image: url("../assets/Running1.jpeg");
 }
 
-#ads #ad3{
+#ads #ad3 {
     background-image: url("../assets/voetbal1.jpg");
     background-color: #2e2e2e;
 }
-
 
 footer {
     background-color: #282828;
@@ -169,20 +166,18 @@ footer {
     text-align: center;
     margin-top: 40px;
 }
+
 @media (max-width: 768px) {
     .footer-container {
         flex-direction: column;
     }
-
     .footer-section {
         margin-right: 0;
         margin-bottom: 20px;
     }
 }
 
-
-
-main{
+main {
     max-width: 1500px;
     width: 95%;
     margin: 30px auto;
@@ -192,7 +187,7 @@ main{
     margin: auto;
 }
 
-main .card{
+main .card {
     max-width: 300px;
     flex: 1 1 210px;
     text-align: center;
@@ -202,46 +197,45 @@ main .card{
     background-color: lightgray;
 }
 
-main .card .image{
+main .card .image {
     height: 50%;
     margin-bottom: 20px;
 }
 
-main .card .image img{
+main .card .image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-main .card .caption{
+main .card .caption {
     padding-left: 1em;
     line-height: 2em;
     height: 25%;
 }
 
-main .card .caption .discount{
+main .card .caption .discount {
     color: red;
 }
 
-
-del{
+del {
     text-decoration: line-through;
 }
 
-main .card .caption .rate{
+main .card .caption .rate {
     margin: 0 auto;
     width: auto;
 }
 
-main .card .caption .rate i{
+main .card .caption .rate i {
     color: gold;
 }
 
-main .card a{
+main .card a {
     width: 50%;
 }
 
-main .card button{
+main .card button {
     border: 2px solid black;
     padding: 1em;
     width: 80%;
@@ -251,7 +245,7 @@ main .card button{
     position: relative;
 }
 
-main .card button:before{
+main .card button:before {
     content: "";
     position: absolute;
     top: 0;
@@ -263,7 +257,7 @@ main .card button:before{
     margin: 0;
 }
 
-main .card button::after{
+main .card button::after {
     content: "";
     position: absolute;
     top: 0;
@@ -274,15 +268,15 @@ main .card button::after{
     transition: all .5s;
 }
 
-main .card button:hover::before{
+main .card button:hover::before {
     width: 30%;
 }
 
-main .card button:hover::after{
+main .card button:hover::after {
     width: 30%;
 }
 
-.winkelwagen{
+.winkelwagen {
     position: absolute;
     height: 20px;
     width: 20px;
@@ -290,20 +284,15 @@ main .card button:hover::after{
     margin-left: 10px;
 }
 
-.bedrag{
+.bedrag {
     margin: 0;
-    position: fixed;
     background-color: white;
     color: black;
-    margin-left: 1000px;
-    margin-top: 135px;
-    height: 475px;
-    width: 430px;
-
+    float: right;
+    width: 300px;
 }
 
 p1 {
-    position: fixed;
     font-size: 22px;
     text-decoration: none;
     margin-left: 10px;
@@ -311,7 +300,6 @@ p1 {
 }
 
 p2 {
-    position: fixed;
     font-size: 16px;
     text-decoration: none;
     margin-left: 30px;
@@ -319,7 +307,6 @@ p2 {
 }
 
 p3 {
-    position: fixed;
     font-size: 13px;
     text-decoration: none;
     margin-left: 30px;
@@ -328,7 +315,6 @@ p3 {
 }
 
 p4 {
-    position: fixed;
     font-size: 16px;
     text-decoration: none;
     margin-left: 30px;
@@ -345,28 +331,27 @@ p4 {
 }
 
 .lijn1 {
-    position: fixed;
     border: 1px solid rgb(0, 0, 0);
     width: 430px;
     margin-left: 0px;
     margin-top: 45px;
- }
- .lijn2 {
-    position: fixed;
+}
+
+.lijn2 {
     border: 1px solid rgb(0, 0, 0);
     width: 330px;
     margin-left: 50px;
     margin-top: 200px;
- }
- .lijn3 {
-    position: fixed;
+}
+
+.lijn3 {
     border: 1px solid rgb(0, 0, 0);
     width: 330px;
     margin-left: 50px;
     margin-top: 250px;
- }
+}
 
- .kopen {
+.kopen {
     position: fixed;
     background-color: #2e2e2e;
     color: white;
@@ -375,14 +360,55 @@ p4 {
     width: 330px;
     height: 40px;
     border-radius: 10px;
- }
+}
 
- .kopen:hover {
+.kopen:hover {
     background-color: #8b8b8b;
- }
+}
 
- .verplicht:hover {
+.verplicht:hover {
     color: #689aff;
- }
+}
 
- 
+.items {
+    width: 60vw;
+    height: 70vh;
+    background-color: violet;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.item {
+    padding: 1em;
+    display: flex;
+    gap: 1em;
+    align-items: center;
+}
+
+.item button {
+    padding: 3px;
+    border: none;
+    background-color: transparent;
+    color: #000;
+    cursor: pointer;
+}
+
+.item-info {
+    display: flex;
+    gap: 1em;
+}
+
+.item>img {
+    width: 12%;
+    height: 100%;
+    object-fit: cover;
+}

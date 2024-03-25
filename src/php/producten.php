@@ -128,11 +128,15 @@
             </div>
             <button class="add">Add to cart</button>
         </div>
-        <div class="card">
+        <form  action="addcartitem.php" method="POST" class="card">
             <div class="image">
                 <img src="../assets/voetbalironman.jpg">
             </div>
             <div class="caption">
+                <input type="hidden" name="ppic" value="voetbalironman.jpg"/>
+                <input type="hidden" name="pname" value="Nike X Marvel Ironman"/>
+                <input type="hidden" name="pprice" value="299"/>
+
                 <p class="rate">
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
@@ -144,7 +148,7 @@
                 <p class="price"><b>$299</b></p>
             </div>
             <button class="add">Add to cart</button>
-        </div>
+        </form>
         <div class="card">
             <div class="image">
                 <img src="../assets/voetbal7-PhotoRoom.png-PhotoRoom.png">

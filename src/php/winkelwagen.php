@@ -22,18 +22,33 @@
     </header>
 <!-- /navigatiebalk -->
 <!-- totaal bedrag venster -->
-    <div class="bedrag">
-        <p1>Samenvatting</p1>
-            <hr class="lijn1">
-        <p2>Subotaal&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;€<br><br>
-            BTW&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;€</p2>
-            <hr class="lijn2">
-        <p3>Totaal excl. BTW&nbsp;&nbsp;&nbsp;&nbsp;€</p3>
-            <hr class="lijn3">
-        <p4>Totaal incl. BTW&nbsp;&nbsp;&nbsp;&nbsp;€</p4>
-            <input type="button" class="kopen" value="Doorgaan naar kassa">
-        <a href="../../php/login.php" class="verplicht">Account aanmaken verplicht.</a>
+<div class="container">
+    <div class="items">
+        <div class="item">
+            <img src="../assets/voetbal1.jpg" alt="voetbal1">
+            <div class="item-info">
+                <p class="item-name">Nike Mercurial Vapor</p>
+                <p class="item-price">€150</p>
+                <p class="item-quantity">Aantal: 1</p>
+                <button class="verwijderen">Verwijderen</button>
+            </div>
+        </div>
+        <div class="item">
+            <img src="../assets/voetbal1.jpg" alt="voetbal1">
+            <div class="item-info">
+                <p class="item-name">Nike Mercurial Vapor</p>
+                <p class="item-price">€150</p>
+                <p class="item-quantity">Aantal: 1</p>
+                <button class="verwijderen">Verwijderen</button>
+            </div>
+        </div>
     </div>
+    <div class="bedrag">
+        <!-- Your additional styling goes here -->
+    </div>
+</div>
+    </div>
+</div>
 <!-- /totaal bedrag venster -->
 </body>
 </html>
