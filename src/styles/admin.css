@@ -1,0 +1,42 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-top: 15%;
+}
+
+.heading {
+    text-align: center;
+    margin-top: 0;
+}
+
+.add_product {
+    display: flex;
+    flex-direction: column;
+}
+
+.input_fields {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.submit_btn {
+    background-color: grey;
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 5px;
+}

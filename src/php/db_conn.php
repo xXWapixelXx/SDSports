@@ -4,7 +4,7 @@
     $unmae = "root";
     $password = "";
 
-    $db_name = "test_db";
+    $db_name = "sdsports";
 
     $conn = mysqli_connect($sname, $unmae, $password, $db_name);
 
